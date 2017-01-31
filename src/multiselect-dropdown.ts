@@ -76,7 +76,7 @@ export class MultiSelectSearchFilter {
   `],
   template: `
 	<div class="dropdown">
-	    <button type="button" class="dropdown-toggle" [ngClass]="settings.buttonClasses"
+	    <button type="button" class="dropdown-toggle" [ngClass]="settings.buttonClasses" style="width: 100%;"
 	    (click)="toggleDropdown()">{{ title }}&nbsp;<span class="caret"></span></button>
 	    <ul *ngIf="isVisible" class="dropdown-menu" [class.pull-right]="settings.pullRight" [class.dropdown-menu-right]="settings.pullRight"
 	    [style.max-height]="settings.maxHeight" style="display: block; height: auto; overflow-y: auto;">
@@ -120,7 +120,6 @@ export class MultiSelectSearchFilter {
 `
 })
 export class MultiselectDropdown implements OnInit, DoCheck, ControlValueAccessor {
-
   @Input() options: Array<IMultiSelectOption>;
   @Input() settings: IMultiSelectSettings;
   @Input() texts: IMultiSelectTexts;
